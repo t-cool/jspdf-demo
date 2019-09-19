@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple example</title>
+</head>
+<style>
+    html {
+        box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+</style>
+<body>
+<button onclick="generate()">Generate pdf</button>
+
+<script src="libs/jspdf.debug.js"></script>
+<script src="libs/jspdf.plugin.autotable.js"></script>
+
+<script>
+    function generate() {
+        var head = [["ID", "Country", "Rank", "Capital"]];
+        var body = [
+            [1, "Denmark", 7.526, "Copenhagen"],
+            [2, "Switzerland", 	7.509, "Bern"],
+            [3, "Iceland", 7.501, "Reykjavík"],
+            [4, "Norway", 7.498, "Oslo"],
+            [5, "Finland", 7.413, "Helsinki"]
+        ];
+
+        var doc = new jsPDF();
+        doc.autoTable({head: head, body: body});
+        doc.output("dataurlnewwindow");
+    }
+</script>
+</body>
+</html>
