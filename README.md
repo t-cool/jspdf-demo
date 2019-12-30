@@ -1,5 +1,7 @@
 # jsPDF Demo
 
+[jsPDF](https://github.com/MrRio/jsPDF)
+
 ## Usage
 
 ```
