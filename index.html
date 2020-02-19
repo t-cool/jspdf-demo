@@ -40,11 +40,11 @@ function generate() {
                   ["cat", "ネコ", "キャット"],
                   ["elephant", "ゾウ", "エレファント"]];
 
-    for(var i = 1, len = result.length; i < len; i++){
-        doc.text((i+1).toString(), 10, 20 * (i+1));
-        doc.text(result[i][0], 30, 20 * (i+1));
-        doc.text(result[i][1], 70, 20 * (i+1));
-        doc.text(result[i][2], 120, 20 * (i+1));
+    for(var i = 0, len = result.length, header = 20; i < len; i++){
+        doc.text((i+1).toString(), 10, header + 20 * (i+1));
+        doc.text(result[i][0], 30, header + 20 * (i+1));
+        doc.text(result[i][1], 70, header + 20 * (i+1));
+        doc.text(result[i][2], 120, header + 20 * (i+1));
     }
     doc.output("dataurlnewwindow");              
     doc.save("result.pdf");
@@ -64,7 +64,7 @@ var doc = new jsPDF();
 doc.addFileToVFS("./libs/KosugiMaru-Regular.ttf", KosugiMaruRegular);
 doc.addFont('./libs/KosugiMaru-Regular.ttf', 'KosugiMaru', 'normal');
 doc.setFont('KosugiMaru', 'normal');
-doc.setFontSize(15);
+doc.setFontSize(13);
 
 function generate() {
     doc.text("No.", 10, 20);
@@ -76,11 +76,11 @@ function generate() {
                   ["cat", "ネコ", "キャット"],
                   ["elephant", "ゾウ", "エレファント"]];
 
-    for(var i = 1, len = result.length; i < len; i++){
-        doc.text((i+1).toString(), 10, 20 * (i+1));
-        doc.text(result[i][0], 30, 20 * (i+1));
-        doc.text(result[i][1], 70, 20 * (i+1));
-        doc.text(result[i][2], 120, 20 * (i+1));
+    for(var i = 0, len = result.length, header = 20; i < len; i++){
+        doc.text((i+1).toString(), 10, header + 20 * (i+1));
+        doc.text(result[i][0], 30, header + 20 * (i+1));
+        doc.text(result[i][1], 70, header + 20 * (i+1));
+        doc.text(result[i][2], 120, header + 20 * (i+1));
     }
     doc.output("dataurlnewwindow");              
     doc.save("result.pdf");
