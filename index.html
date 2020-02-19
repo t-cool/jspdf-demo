@@ -67,14 +67,14 @@ doc.setFont('KosugiMaru', 'normal');
 doc.setFontSize(15);
 
 function generate() {
-    doc.text("No.", 10, 10);
-    doc.text("英語", 30, 10);
-    doc.text("発音", 70, 10);
-    doc.text("日本語", 120, 10);
+    doc.text("No.", 10, 20);
+    doc.text("英語", 30, 20);
+    doc.text("日本語", 120, 20);
+    doc.text("発音", 70, 20);
 
-    var result = [["dog", "ドグ", "イヌ"],
-                  ["cat", "キャット", "ネコ"],
-                  ["elephant", "エレファント", "ゾウ"]];
+    var result = [["dog", "イヌ", "ドグ"],
+                  ["cat", "ネコ", "キャット"],
+                  ["elephant", "ゾウ", "エレファント"]];
 
     for(var i = 0, len = result.length; i < len; i++){
         doc.text((i+1).toString(), 10, 20 * (i+1));
@@ -85,6 +85,7 @@ function generate() {
     doc.output("dataurlnewwindow");              
     doc.save("result.pdf");
 }
+
 </script>
 </body>
 
