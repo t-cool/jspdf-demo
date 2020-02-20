@@ -1,6 +1,11 @@
 # jsPDF Demo
 
-[jsPDF](https://github.com/MrRio/jsPDF) を利用して、フロントエンド JavaScript だけで PDF 生成を行うデモ。
+[jsPDF](https://github.com/MrRio/jsPDF) を利用して、フロントエンドで PDF を生成するデモ。
+
+## フォントの準備
+
+UTF-8 のフォントを読み込むには、ttf ファイルを Base64形式のバイナリ形式に変換して読み込む必要があります。[https://rawgit.com/MrRio/jsPDF/master/fontconverter/fontconverter.html](https://rawgit.com/MrRio/jsPDF/master/fontconverter/fontconverter.html) で ttf ファイルからバイナリ形式に変換できます。詳細は [https://artskydj.github.io/jsPDF/docs](https://artskydj.github.io/jsPDF/docs) を参照してください。
+
 
 ## 使い方
 
